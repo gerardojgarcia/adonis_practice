@@ -13,11 +13,12 @@
 
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="/movies">Movies</a>
+        <a href="{{ route('home')}}">Home</a>
+        <a href="{{ route('movies.show', { slug: 'my-awesome-movie' }) }}">My Awesome Movies</a>
+        <a href="{{ route('movies.show', { slug: 'another-awesome-movie' }) }}">Another Awesome Movies</a>
 
     </nav>
-    <h1> This is the movies </h1>
+    {{{ movie }}}
 </body>
 
 </html>
