@@ -18,6 +18,6 @@ router
   .get('/movies/:slug', async (ctx) => {
     const url = app.makeURL(`resources/movies/${ctx.params.slug}.html`)
     const movie = await fs.readFile(url, 'utf8')
-    return ctx.view.render('pages/movies', { movie })
+    return ctx.view.render('pages/movies/show', { movie })
   })
   .as('movies.show')
