@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -10,5 +14,5 @@ body {
 }
 
 h1 {
-  color: blue;
+  @apply text-3xl m-auto my-6 font-bold;
 }

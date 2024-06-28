@@ -12,13 +12,32 @@
 </head>
 
 <body>
-  <nav>
+  <div class="max-w-3xl m-auto">
+    <nav>
     <a href="{{ route('home')}}">Home</a>
     <a href="{{ route('movies.show', { slug: 'my-awesome-movie' }) }}">My Awesome Movies</a>
     <a href="{{ route('movies.show', { slug: 'another-awesome-movie' }) }}">Another Awesome Movies</a>
     <a href="{{ route('movies.show', { slug: 'awesome-movie-trilogy' }) }}">Another Awesome Movies</a>
   </nav>
-  <h1> It Works </h1>
+  <h1 > It Works </h1>
+ 
+
+
+<ul>
+@each (slug in slugs)
+
+<li>
+<a href="{{route('movies.show', {slug})}}">{{slug}}</a>
+
+</li>
+
+@endeach
+
+</ul>
+
+</div>
+
+
 </body>
 
 </html>
